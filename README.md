@@ -37,7 +37,6 @@ Here’s a short demo of the BakeBuddy Streamlit app in action:
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/wingylui/LLMzoomcamp.git
-cd baking-assistant
 ```
 
 ### 2️⃣ Environment Variables
@@ -59,7 +58,7 @@ This launches the full stack:
 | Service | Description | URL |
 |---------|-------------|-----|
 | 🧁 Streamlit | Recipe search interface | [http://localhost:8501](http://localhost:8501) |
-| 🗄️ Postgres | Structured metadata storage | localhost:5433 |
+| 🗄️ Postgres | Structured metadata storage | [http://localhost:5433](http://localhost:5433) |
 | 🧠 Qdrant | Vector similarity search | [http://localhost:6333](http://localhost:6333) |
 | 📊 Grafana | Metrics and monitoring | [http://localhost:3000](http://localhost:3000) |
 
