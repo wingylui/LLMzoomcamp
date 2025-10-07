@@ -28,7 +28,8 @@ It combines **Qdrant** for vector-based retrieval, **Postgres** for metadata sto
 
 Here’s a short demo of the BakeBuddy Streamlit app in action:
 
-<video width="700" src="https://github.com/wingylui/LLMzoomcamp/blob/main/img/video_demo.mp4"></video>
+
+[Watch BakeBuddy Demo](https://www.youtube.com/watch?v=b7oyp3wkDCAs)
 
 ---
 
