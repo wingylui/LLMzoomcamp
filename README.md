@@ -1,5 +1,4 @@
-# LLMzoomcamp
-# 🍰 Baking Assistant — Recipe Retrieval and Recommendation System
+## 🍰 Baking Assistant — Recipe Retrieval and Recommendation System
 
 A **Retrieval-Augmented Generation (RAG)** application that helps users discover and generate baking recipes using natural language.  
 The project integrates **semantic search**, **structured filtering**, and **LLM-based evaluation** to identify the most effective retrieval pipeline for recipe search and generation.
