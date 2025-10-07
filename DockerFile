@@ -1,0 +1,29 @@
+FROM python:3.12-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies (for pipenv + psycopg2 + streamlit)
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install pipenv
+RUN pip install --no-cache-dir pipenv
+
+# Copy Pipenv files first (for efficient Docker caching)
+COPY ["Pipfile", "Pipfile.lock", "./"]
+
+# Install Python dependencies into the system (no virtualenv)
+RUN pipenv install --deploy --ignore-pipfile --system
+
+# Copy application code
+COPY app ./app
+COPY data/baking_cleanded.json ./data/baking_cleanded.json
+
+# Expose Streamlit’s default port
+EXPOSE 8501
+
+# Streamlit entrypoint
+CMD ["streamlit", "run", "app/src/interface/streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
